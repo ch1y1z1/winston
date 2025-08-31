@@ -108,10 +108,28 @@ struct TranslationPanel: View {
     isTestingConnection = true
     testResult = nil
     Task {
-      let result = await translationService.translateText("Hello, world!")
+      let result = await translationService.testConnection()
       await MainActor.run {
         isTestingConnection = false
-        testResult = result != nil ? .success("✅ Connection successful!") : .failure("❌ Connection failed. Please check your settings.")
+        switch result {
+        case .success:
+          testResult = .success("✅ Connection successful!")
+        case .failure(let err):
+          let message: String
+          switch err {
+          case .unauthorized:
+            message = "❌ Unauthorized. Check API key and endpoint."
+          case .rateLimited:
+            message = "❌ Rate limited. Please try again later."
+          case .invalidEndpoint:
+            message = "❌ Invalid endpoint URL."
+          case .invalidResponse:
+            message = "❌ Invalid response from API."
+          case .apiError:
+            message = "❌ API error occurred."
+          }
+          testResult = .failure(message)
+        }
       }
     }
   }
