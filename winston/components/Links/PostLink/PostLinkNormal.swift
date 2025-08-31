@@ -16,12 +16,7 @@ struct PostLinkNormalSelftext: View, Equatable {
   var selftext: String
   var theme: ThemeText
   var body: some View {
-    Text(selftext).lineLimit(3)
-      .fontSize(theme.size, theme.weight.t)
-      .foregroundColor(theme.color())
-      .fixedSize(horizontal: false, vertical: true)
-      .frame(maxWidth: .infinity, alignment: .topLeading)
-    //      .id("body")
+    TranslatableText(text: selftext, style: theme, lineLimit: 3)
   }
 }
 
@@ -120,7 +115,7 @@ struct PostLinkNormal: View, Equatable, Identifiable {
         
         if defSettings.titlePosition == .bottom { mediaComponentCall() }
         
-        PostLinkTitle(attrString: winstonData.titleAttr, label: data.title.escape, theme: theme.theme.titleText, size: winstonData.postDimensions.titleSize, nsfw: over18, flair: data.link_flair_text)
+        TranslatableTitle(attrString: winstonData.titleAttr, label: data.title.escape, theme: theme.theme.titleText, size: winstonData.postDimensions.titleSize, nsfw: over18, flair: data.link_flair_text)
           .padding(.bottom, 5)
         
         if !data.selftext.isEmpty && defSettings.showSelfText {

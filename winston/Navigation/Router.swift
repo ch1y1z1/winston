@@ -117,7 +117,7 @@ class Router: ObservableObject, Hashable, Equatable, Identifiable {
     }
     enum Setting: String, Hashable, Codable, Identifiable {
       var id: String { self.rawValue }
-      case behavior, appearance, credentials, about, commentSwipe, postSwipe, accessibility, faq, general, themes, filteredSubreddits, appIcon, themeStore
+      case behavior, appearance, credentials, about, commentSwipe, postSwipe, accessibility, faq, general, themes, filteredSubreddits, appIcon, themeStore, translation
     }
   }
   

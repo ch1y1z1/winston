@@ -74,6 +74,8 @@ extension View {
             ThemeStore()
           case .appIcon:
             AppIconSetting()
+          case .translation:
+            TranslationPanel()
           }
         }
       })

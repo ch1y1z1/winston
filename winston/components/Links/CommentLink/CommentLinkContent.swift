@@ -222,22 +222,31 @@ struct CommentLinkContent: View {
               VStack {
                 Group {
                   if lineLimit != nil {
-                    Text(body.md())
-                      .lineLimit(lineLimit)
+                    TranslatableCommentText(
+                      text: body,
+                      style: theme.theme.bodyText,
+                      lineLimit: lineLimit,
+                      showSpoiler: showSpoiler
+                    )
                   } else {
-                    HStack {
-                      Markdown(MarkdownUtil.formatForMarkdown(body, showSpoiler: showSpoiler))
-                        .markdownTheme(.winstonMarkdown(fontSize: theme.theme.bodyText.size, lineSpacing: theme.theme.linespacing, textSelection: selectable))
-                      
-                      if MarkdownUtil.containsSpoiler(body) {
-                        Spacer()
-                        Image(systemName: showSpoiler ? "eye.slash.fill" : "eye.fill")
-                          .onTapGesture {
-                            withAnimation {
-                              showSpoiler = !showSpoiler
+                    VStack(alignment: .leading, spacing: 8) {
+                      HStack {
+                        Markdown(MarkdownUtil.formatForMarkdown(body, showSpoiler: showSpoiler))
+                          .markdownTheme(.winstonMarkdown(fontSize: theme.theme.bodyText.size, lineSpacing: theme.theme.linespacing, textSelection: selectable))
+                        
+                        if MarkdownUtil.containsSpoiler(body) {
+                          Spacer()
+                          Image(systemName: showSpoiler ? "eye.slash.fill" : "eye.fill")
+                            .onTapGesture {
+                              withAnimation {
+                                showSpoiler = !showSpoiler
+                              }
                             }
-                          }
+                        }
                       }
+                      
+                      // Translated comment content
+                      TranslatedCommentContent(originalText: body, style: theme.theme.bodyText, showSpoiler: showSpoiler)
                     }
                   }
                 }

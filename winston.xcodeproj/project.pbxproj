@@ -224,6 +224,12 @@
 		EC49A8E92B49D7F400000EBD /* GuidedErrorScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC49A8E82B49D7F400000EBD /* GuidedErrorScene.swift */; };
 		EC49A8EB2B49D7FE00000EBD /* GuidedCredsCapturedScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC49A8EA2B49D7FE00000EBD /* GuidedCredsCapturedScene.swift */; };
 		EC49A8ED2B49D81000000EBD /* GuidedAuthSuccessScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC49A8EC2B49D81000000EBD /* GuidedAuthSuccessScene.swift */; };
+		ECFB00012B70000000AAA001 /* TranslationPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFB00002B70000000AAA000 /* TranslationPanel.swift */; };
+		ECFB00042B70000000AAA004 /* TranslationSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFB00032B70000000AAA003 /* TranslationSettings.swift */; };
+		ECFB00062B70000000AAA006 /* TranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFB00052B70000000AAA005 /* TranslationService.swift */; };
+		ECFB00082B70000000AAA008 /* TranslatableText.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFB00072B70000000AAA007 /* TranslatableText.swift */; };
+		ECFB000A2B70000000AAA00A /* TranslatableTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFB00092B70000000AAA009 /* TranslatableTitle.swift */; };
+		ECFB000C2B70000000AAA00C /* TranslatableCommentText.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFB000B2B70000000AAA00B /* TranslatableCommentText.swift */; };
 		EC49A8F12B49F7C100000EBD /* WinstonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC49A8F02B49F7C100000EBD /* WinstonButton.swift */; };
 		EC4C7C912B2BFA080007A4DA /* PostLinkDefSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4C7C902B2BFA080007A4DA /* PostLinkDefSettings.swift */; };
 		EC4C7C962B2C54310007A4DA /* VideoDefSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4C7C952B2C54310007A4DA /* VideoDefSettings.swift */; };
@@ -602,6 +608,12 @@
 		65840EE72AE11BFD000315E1 /* exportImportSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exportImportSettings.swift; sourceTree = "<group>"; };
 		658DB5A32AFBB8230062F8B1 /* fetchThemeByID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fetchThemeByID.swift; sourceTree = "<group>"; };
 		6593CC422A88C9E8003CA58D /* AccessibilityPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityPanel.swift; sourceTree = "<group>"; };
+		ECFB00002B70000000AAA000 /* TranslationPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationPanel.swift; sourceTree = "<group>"; };
+		ECFB00032B70000000AAA003 /* TranslationSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TranslationSettings.swift; path = winston/models/Translation/TranslationSettings.swift; sourceTree = SOURCE_ROOT; };
+		ECFB00052B70000000AAA005 /* TranslationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TranslationService.swift; path = winston/models/Translation/TranslationService.swift; sourceTree = SOURCE_ROOT; };
+		ECFB00072B70000000AAA007 /* TranslatableText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TranslatableText.swift; path = winston/components/TranslatableText.swift; sourceTree = SOURCE_ROOT; };
+		ECFB00092B70000000AAA009 /* TranslatableTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TranslatableTitle.swift; path = winston/components/TranslatableTitle.swift; sourceTree = SOURCE_ROOT; };
+		ECFB000B2B70000000AAA00B /* TranslatableCommentText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TranslatableCommentText.swift; path = winston/components/TranslatableCommentText.swift; sourceTree = SOURCE_ROOT; };
 		659F68012A84E32300989300 /* VotesCluster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotesCluster.swift; sourceTree = "<group>"; };
 		659FDEA72A87798300103414 /* VoteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteButton.swift; sourceTree = "<group>"; };
 		65A5FFF12ACED3BF000D1ADA /* getPreviewImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getPreviewImages.swift; sourceTree = "<group>"; };
@@ -931,6 +943,7 @@
 		EC91C8552AB9838D00F2AD30 /* CommonListsThemingPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonListsThemingPanel.swift; sourceTree = "<group>"; };
 		EC91C8572AB9884F00F2AD30 /* GeneralTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralTheme.swift; sourceTree = "<group>"; };
 		EC91C85B2AB99E5600F2AD30 /* FilteredSubredditsSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredSubredditsSettings.swift; sourceTree = "<group>"; };
+		ECFB00002B70000000AAA000 /* TranslationPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationPanel.swift; sourceTree = "<group>"; };
 		EC9269E72A514AA6003F33B1 /* DownAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownAttributedString.swift; sourceTree = "<group>"; };
 		EC97F0272ACB006A001814A6 /* importTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = importTheme.swift; sourceTree = "<group>"; };
 		EC982A2E2B4A267200FFE582 /* edit-appear.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "edit-appear.json"; sourceTree = "<group>"; };
@@ -1272,6 +1285,7 @@
 				653E2DA42A8E278800833556 /* GeneralPanel.swift */,
 				EC91C85B2AB99E5600F2AD30 /* FilteredSubredditsSettings.swift */,
 				ECF5B3082AC83C8E00355589 /* AppIconSetting.swift */,
+				ECFB00002B70000000AAA000 /* TranslationPanel.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -1642,6 +1656,8 @@
 				ECF5B3042AC837F500355589 /* IconManager.swift */,
 				EC4C7CB32B2E17D00007A4DA /* Hap.swift */,
 				EC982A332B4A436600FFE582 /* TimerHolder.swift */,
+				ECFB00032B70000000AAA003 /* TranslationSettings.swift */,
+				ECFB00052B70000000AAA005 /* TranslationService.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -2308,6 +2324,9 @@
 				EC6081272B43B04E001A1077 /* PressableButton.swift */,
 				EC4792E12B45143000487AEE /* BetterLottieView.swift */,
 				EC49A8F02B49F7C100000EBD /* WinstonButton.swift */,
+				ECFB00072B70000000AAA007 /* TranslatableText.swift */,
+				ECFB00092B70000000AAA009 /* TranslatableTitle.swift */,
+				ECFB000B2B70000000AAA00B /* TranslatableCommentText.swift */,
 				BBD6E9D62B50F37200901C1C /* Quirky Msg Util.swift */,
 			);
 			path = Components;
@@ -2685,6 +2704,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECFB00012B70000000AAA001 /* TranslationPanel.swift in Sources */,
+				ECFB00042B70000000AAA004 /* TranslationSettings.swift in Sources */,
+				ECFB00062B70000000AAA006 /* TranslationService.swift in Sources */,
+				ECFB00082B70000000AAA008 /* TranslatableText.swift in Sources */,
+				ECFB000A2B70000000AAA00A /* TranslatableTitle.swift in Sources */,
+				ECFB000C2B70000000AAA00C /* TranslatableCommentText.swift in Sources */,
 				65B0619B2AFE8A05008B7AF3 /* changelog.json in Sources */,
 				EC593AF02A47ACB0002D6454 /* Tabber.swift in Sources */,
 				EC3AC9D42AACCBE40078EC78 /* LabeledTextField.swift in Sources */,
@@ -3516,7 +3541,7 @@
 			repositoryURL = "https://github.com/gonzalezreal/swift-markdown-ui";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.3.0;
+				minimumVersion = 2.4.0;
 			};
 		};
 		EC08543B2A4CFE1C00E88389 /* XCRemoteSwiftPackageReference "swiftui-introspect" */ = {

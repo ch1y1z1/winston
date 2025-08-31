@@ -45,6 +45,9 @@
         }
       }
     },
+    " · " : {
+
+    },
     " testers! (but it needs help)" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -172,6 +175,9 @@
           }
         }
       }
+    },
+    "*Collapsed...*" : {
+
     },
     "*No results found*" : {
       "localizations" : {
@@ -496,6 +502,9 @@
     "Any questions" : {
 
     },
+    "API Configuration" : {
+
+    },
     "App icon" : {
       "localizations" : {
         "de" : {
@@ -551,6 +560,9 @@
 
     },
     "Authorize" : {
+
+    },
+    "Automatically translate posts and comments using OpenAI API" : {
 
     },
     "Autoplay videos (muted)" : {
@@ -681,6 +693,12 @@
         }
       }
     },
+    "Cache Management" : {
+
+    },
+    "Cached Translations" : {
+
+    },
     "Cancel" : {
       "localizations" : {
         "de" : {
@@ -712,6 +730,9 @@
           }
         }
       }
+    },
+    "Clear Cache" : {
+
     },
     "Click the button and follow the video" : {
 
@@ -747,6 +768,9 @@
           }
         }
       }
+    },
+    "Comment skipper button" : {
+
     },
     "Comments" : {
       "localizations" : {
@@ -837,6 +861,9 @@
         }
       }
     },
+    "Concurrency Limit" : {
+
+    },
     "Copied!" : {
       "localizations" : {
         "de" : {
@@ -918,6 +945,9 @@
           }
         }
       }
+    },
+    "Custom Prompt" : {
+
     },
     "Default Launch Feed" : {
       "localizations" : {
@@ -1012,6 +1042,7 @@
       }
     },
     "Depressive load more :(" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -1136,9 +1167,6 @@
         }
       }
     },
-    "Download" : {
-
-    },
     "Drag Left" : {
       "localizations" : {
         "de" : {
@@ -1212,6 +1240,9 @@
 
     },
     "Edit filter" : {
+
+    },
+    "Enable Translation" : {
 
     },
     "Enabling the extension" : {
@@ -1988,6 +2019,9 @@
         }
       }
     },
+    "Jump to Next Comment" : {
+
+    },
     "Just a sec..." : {
       "localizations" : {
         "de" : {
@@ -2444,6 +2478,7 @@
       }
     },
     "No comments around..." : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -2519,6 +2554,9 @@
         }
       }
     },
+    "Number of simultaneous translation requests" : {
+
+    },
     "OK" : {
       "localizations" : {
         "de" : {
@@ -2542,6 +2580,7 @@
 
     },
     "on " : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -2590,6 +2629,7 @@
       }
     },
     "Open links in Safari" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -2626,6 +2666,9 @@
           }
         }
       }
+    },
+    "Open subreddit options on tap" : {
+
     },
     "Open Youtube Videos Externally" : {
       "localizations" : {
@@ -2692,6 +2735,9 @@
       }
     },
     "Pause background audio on fullscreen" : {
+
+    },
+    "Performance" : {
 
     },
     "Placeholder image" : {
@@ -3608,6 +3654,7 @@
       }
     },
     "Tap to expand" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -3659,6 +3706,12 @@
         }
       }
     },
+    "Test Connection" : {
+
+    },
+    "Testing..." : {
+
+    },
     "Thank you so much!" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -3703,9 +3756,6 @@
           }
         }
       }
-    },
-    "Theme Store" : {
-
     },
     "Theme Store Tint" : {
       "localizations" : {
@@ -3772,9 +3822,6 @@
       }
     },
     "There are two ways for doing that:" : {
-
-    },
-    "There was an error importing this theme" : {
 
     },
     "This is not working yet :(" : {
@@ -3942,6 +3989,30 @@
         }
       }
     },
+    "Translate Comments" : {
+
+    },
+    "Translate Posts" : {
+
+    },
+    "Translating comment..." : {
+
+    },
+    "Translating title..." : {
+
+    },
+    "Translating..." : {
+
+    },
+    "Translation" : {
+
+    },
+    "Translation Options" : {
+
+    },
+    "Translation:" : {
+
+    },
     "u/%@" : {
       "localizations" : {
         "de" : {
@@ -4005,6 +4076,9 @@
           }
         }
       }
+    },
+    "Use {{to}} for target language and {{text}} for content" : {
+
     },
     "View full conversation" : {
       "localizations" : {

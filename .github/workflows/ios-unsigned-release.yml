@@ -1,0 +1,87 @@
+name: iOS Unsigned IPA Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build-release:
+    runs-on: macos-14
+    timeout-minutes: 60
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Ensure shell rc exists for build scripts
+        run: |
+          mkdir -p "$HOME"
+          touch "$HOME/.zshrc"
+
+      - name: Setup Node.js (for web extension build)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: 'winston-everywhere/package-lock.json'
+
+      - name: Pre-build web extension assets
+        working-directory: winston-everywhere
+        run: |
+          npm ci
+          npm run build
+
+      - name: Xcodebuild archive (unsigned)
+        env:
+          DEVELOPER_DIR: /Applications/Xcode.app/Contents/Developer
+        run: |
+          set -euo pipefail
+          mkdir -p build
+          xcodebuild \
+            -project winston.xcodeproj \
+            -scheme winston \
+            -configuration Release \
+            -sdk iphoneos \
+            -archivePath build/winston.xcarchive \
+            archive \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            DEVELOPMENT_TEAM="" \
+            ENABLE_USER_SCRIPT_SANDBOXING=NO \
+            SKIP_INSTALL=NO | xcpretty || exit ${PIPESTATUS[0]}
+
+      - name: Package unsigned IPA
+        id: package
+        run: |
+          set -euo pipefail
+          APP_PATH="build/winston.xcarchive/Products/Applications/winston.app"
+          if [ ! -d "$APP_PATH" ]; then
+            echo "App not found at $APP_PATH" >&2
+            exit 1
+          fi
+          IPA_NAME="winston-${GITHUB_REF_NAME}.ipa"
+          rm -rf Payload "$IPA_NAME"
+          mkdir -p Payload
+          cp -R "$APP_PATH" Payload/
+          zip -r "$IPA_NAME" Payload >/dev/null
+          rm -rf Payload
+          echo "ipa_path=$IPA_NAME" >> "$GITHUB_OUTPUT"
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.package.outputs.ipa_path }}
+          path: ${{ steps.package.outputs.ipa_path }}
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ${{ steps.package.outputs.ipa_path }}
+          tag_name: ${{ github.ref_name }}
+          name: ${{ github.ref_name }}
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
