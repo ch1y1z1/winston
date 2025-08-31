@@ -11,7 +11,7 @@ on:
 
 jobs:
   build-release:
-    runs-on: macos-14
+    runs-on: macos-15
     timeout-minutes: 60
     steps:
       - name: Checkout
@@ -26,6 +26,7 @@ jobs:
         run: |
           xcodebuild -version
           swift --version
+          echo "DEVELOPER_DIR=$(xcode-select -p)"
 
       - name: Ensure shell rc exists for build scripts
         run: |
@@ -46,8 +47,6 @@ jobs:
           npm run build
 
       - name: Xcodebuild archive (unsigned)
-        env:
-          DEVELOPER_DIR: /Applications/Xcode.app/Contents/Developer
         run: |
           set -euo pipefail
           mkdir -p build
