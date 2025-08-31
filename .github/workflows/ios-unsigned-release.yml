@@ -2,8 +2,12 @@ name: iOS Unsigned IPA Release
 
 on:
   push:
+    branches: [main]
     tags:
-      - 'v*'
+      - "v*.*.*" # 匹配版本标签，如 v1.0.0
+  pull_request:
+    branches: [main]
+  workflow_dispatch: # 允许手动触发
 
 jobs:
   build-release:
@@ -21,9 +25,9 @@ jobs:
       - name: Setup Node.js (for web extension build)
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
-          cache: 'npm'
-          cache-dependency-path: 'winston-everywhere/package-lock.json'
+          node-version: "18"
+          cache: "npm"
+          cache-dependency-path: "winston-everywhere/package-lock.json"
 
       - name: Pre-build web extension assets
         working-directory: winston-everywhere
@@ -84,4 +88,3 @@ jobs:
           prerelease: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
