@@ -17,10 +17,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Select Xcode (match local 16.4)
+      - name: Select Xcode (Swift 6)
         uses: maxim-lobanov/setup-xcode@v1
         with:
-          xcode-version: '16.4'
+          xcode-version: '16'
 
       - name: Show Xcode and Swift versions
         run: |
