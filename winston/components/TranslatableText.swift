@@ -79,24 +79,26 @@ struct TranslatableText: View {
         }
     }
     
-    @ViewBuilder
     private func textView(for text: String) -> some View {
-        let view = Text(text)
+        Text(text)
             .fontSize(textStyle.size, textStyle.weight.t)
             .foregroundColor(textStyle.color())
             .fixedSize(horizontal: false, vertical: true)
             .frame(maxWidth: .infinity, alignment: .topLeading)
-        
-        if let lineLimit = lineLimit {
-            view.lineLimit(lineLimit)
-        } else {
-            view
+            .modifier(OptionalLineLimit(value: lineLimit))
+            .modifier(OptionalLineSpacing(value: lineSpacing))
+    }
+
+    private struct OptionalLineLimit: ViewModifier {
+        let value: Int?
+        func body(content: Content) -> some View {
+            if let value { content.lineLimit(value) } else { content }
         }
-        
-        if let lineSpacing = lineSpacing {
-            view.lineSpacing(lineSpacing)
-        } else {
-            view
+    }
+    private struct OptionalLineSpacing: ViewModifier {
+        let value: CGFloat?
+        func body(content: Content) -> some View {
+            if let value { content.lineSpacing(value) } else { content }
         }
     }
     

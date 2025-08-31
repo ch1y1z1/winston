@@ -151,7 +151,7 @@ class TranslationService: ObservableObject {
     private func performTranslation(_ text: String) async throws -> String {
         // Cooperative limiting that does not block threads
         await limiter.acquire()
-        defer { await limiter.release() }
+        defer { Task { await limiter.release() } }
         if Task.isCancelled { throw CancellationError() }
         
         guard let url = URL(string: settings.openAIEndpoint) else {

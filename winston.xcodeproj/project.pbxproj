@@ -230,6 +230,7 @@
 		ECFB00082B70000000AAA008 /* TranslatableText.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFB00072B70000000AAA007 /* TranslatableText.swift */; };
 		ECFB000A2B70000000AAA00A /* TranslatableTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFB00092B70000000AAA009 /* TranslatableTitle.swift */; };
 		ECFB000C2B70000000AAA00C /* TranslatableCommentText.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFB000B2B70000000AAA00B /* TranslatableCommentText.swift */; };
+		ECFB000E2B70000000AAA00E /* TranslatableMarkdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFB000D2B70000000AAA00D /* TranslatableMarkdown.swift */; };
 		EC49A8F12B49F7C100000EBD /* WinstonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC49A8F02B49F7C100000EBD /* WinstonButton.swift */; };
 		EC4C7C912B2BFA080007A4DA /* PostLinkDefSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4C7C902B2BFA080007A4DA /* PostLinkDefSettings.swift */; };
 		EC4C7C962B2C54310007A4DA /* VideoDefSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4C7C952B2C54310007A4DA /* VideoDefSettings.swift */; };
@@ -614,6 +615,7 @@
 		ECFB00072B70000000AAA007 /* TranslatableText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TranslatableText.swift; path = winston/components/TranslatableText.swift; sourceTree = SOURCE_ROOT; };
 		ECFB00092B70000000AAA009 /* TranslatableTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TranslatableTitle.swift; path = winston/components/TranslatableTitle.swift; sourceTree = SOURCE_ROOT; };
 		ECFB000B2B70000000AAA00B /* TranslatableCommentText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TranslatableCommentText.swift; path = winston/components/TranslatableCommentText.swift; sourceTree = SOURCE_ROOT; };
+		ECFB000D2B70000000AAA00D /* TranslatableMarkdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TranslatableMarkdown.swift; path = winston/components/TranslatableMarkdown.swift; sourceTree = SOURCE_ROOT; };
 		659F68012A84E32300989300 /* VotesCluster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotesCluster.swift; sourceTree = "<group>"; };
 		659FDEA72A87798300103414 /* VoteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteButton.swift; sourceTree = "<group>"; };
 		65A5FFF12ACED3BF000D1ADA /* getPreviewImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getPreviewImages.swift; sourceTree = "<group>"; };
@@ -2327,6 +2329,7 @@
 				ECFB00072B70000000AAA007 /* TranslatableText.swift */,
 				ECFB00092B70000000AAA009 /* TranslatableTitle.swift */,
 				ECFB000B2B70000000AAA00B /* TranslatableCommentText.swift */,
+				ECFB000D2B70000000AAA00D /* TranslatableMarkdown.swift */,
 				BBD6E9D62B50F37200901C1C /* Quirky Msg Util.swift */,
 			);
 			path = Components;
@@ -2710,6 +2713,7 @@
 				ECFB00082B70000000AAA008 /* TranslatableText.swift in Sources */,
 				ECFB000A2B70000000AAA00A /* TranslatableTitle.swift in Sources */,
 				ECFB000C2B70000000AAA00C /* TranslatableCommentText.swift in Sources */,
+				ECFB000E2B70000000AAA00E /* TranslatableMarkdown.swift in Sources */,
 				65B0619B2AFE8A05008B7AF3 /* changelog.json in Sources */,
 				EC593AF02A47ACB0002D6454 /* Tabber.swift in Sources */,
 				EC3AC9D42AACCBE40078EC78 /* LabeledTextField.swift in Sources */,

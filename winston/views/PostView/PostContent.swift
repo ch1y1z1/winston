@@ -49,10 +49,7 @@ struct PostContent: View, Equatable {
       }
       
       Group {
-        Text(data.title)
-          .fontSize(postsTheme.titleText.size, .semibold)
-          .foregroundColor(postsTheme.titleText.color())
-          .fixedSize(horizontal: false, vertical: true)
+        TranslatableText(text: data.title, style: postsTheme.titleText)
           .id("post-title")
           .onAppear { Task { await post.toggleSeen(true) } }
           .listRowInsets(EdgeInsets(top: postsTheme.padding.vertical, leading: postsTheme.padding.horizontal, bottom: postsTheme.spacing / 2, trailing: selectedTheme.posts.padding.horizontal))
@@ -66,8 +63,7 @@ struct PostContent: View, Equatable {
                 }
                 
                 if !data.selftext.isEmpty {
-                  Markdown(MarkdownUtil.formatForMarkdown(data.selftext))
-                    .markdownTheme(.winstonMarkdown(fontSize: selectedTheme.posts.bodyText.size, lineSpacing: selectedTheme.posts.linespacing))
+                  TranslatableMarkdown(text: data.selftext, style: selectedTheme.posts.bodyText, lineSpacing: selectedTheme.posts.linespacing)
                 }
               }
               .nsfw(over18 && defSettings.blurNSFW)
